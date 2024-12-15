@@ -1,7 +1,7 @@
 const userModel = require('../models/user.model');
 const userService = require('../services/user.service');
 const { validationResult } = require('express-validator');
-const blackListTokenModel = require('../models/blackListToken.model');
+const blackListTokenModel = require('../models/blacklListToken.model');
 
 module.exports.registerUser = async (req, res, next) => {
 
@@ -49,7 +49,7 @@ module.exports.loginUser = async (req, res, next) => {
         return res.status(401).json({ message: 'Invalid email or password' });
     }
 
-     const isMatch = await user.comparePassword(password);
+    const isMatch = await user.comparePassword(password);
 
     if (!isMatch) {
         return res.status(401).json({ message: 'Invalid email or password' });
