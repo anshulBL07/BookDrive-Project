@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import { UserDataContext } from '../context/UserContext'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import logo from './mainimg.png'
 
 const UserLogin = () => {
   // eslint-disable-next-line no-undef
@@ -31,9 +32,9 @@ const UserLogin = () => {
     setPassword('')
   }
   return (
-    <div className='p-7 h-screen flex flex-col justify-between'>
+    <div className='bg-blue-100 p-7 h-screen flex flex-col justify-between'>
       <div>
-      <img className='w-16 mb-10' src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="Logo" />
+      <img className='h-16 w-25 mb-10' src={logo} alt="Logo" />
       <form onSubmit={(e)=>{
         submitHandler(e)
         }}>

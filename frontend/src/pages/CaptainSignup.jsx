@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CaptainDataContext } from '../context/CapatainContext'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import logo from './Driver.png'
 
 const CaptainSignup = () => {
 
@@ -59,9 +60,9 @@ const CaptainSignup = () => {
 
   }
   return (
-    <div className='py-5 px-5 h-screen flex flex-col justify-between'>
-      <div>
-        <img className='w-20 mb-3' src="https://www.svgrepo.com/show/505031/uber-driver.svg" alt="" />
+    <div className=' bg-orange-100 py-5 px-5 h-screen flex flex-col justify-between'>
+      <div className="bg-orange-100">
+        <img className='w-20 mb-3' src={logo} alt="" />
 
         <form onSubmit={(e) => {
           submitHandler(e)
@@ -169,10 +170,10 @@ const CaptainSignup = () => {
           >Create Captain Account</button>
 
         </form>
-        <p className='text-center'>Already have a account? <Link to='/captain-login' className='text-blue-600'>Login here</Link></p>
+        <p className='bg-orange-100 text-center'>Already have a account? <Link to='/captain-login' className='text-blue-600'>Login here</Link></p>
       </div>
-      <div>
-        <p className='text-[10px] mt-6 leading-tight'>This site is protected by reCAPTCHA and the <span className='underline'>Google Privacy
+      <div className='bg-orange-100'>
+        <p className='text-[10px] mt-8 mt-6 leading-tight'>This site is protected by reCAPTCHA and the <span className='underline'>Google Privacy
           Policy</span> and <span className='underline'>Terms of Service apply</span>.</p>
       </div>
     </div>

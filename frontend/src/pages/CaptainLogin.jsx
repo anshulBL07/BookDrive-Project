@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { CaptainDataContext } from '../context/CapatainContext'
+import logo from './Driver.png'
 
 export const CaptainLogin = () => {
   const [email, setEmail] = useState('')
@@ -32,9 +33,9 @@ export const CaptainLogin = () => {
     setPassword('')
   }
   return (
-    <div className='p-7 h-screen flex flex-col justify-between'>
+    <div className='bg-orange-100 p-7 h-screen flex flex-col justify-between'>
       <div>
-        <img className='w-20 mb-4' src="https://pngimg.com/d/uber_PNG24.png" alt="Logo" />
+        <img className='w-20 mb-3' src={logo} alt="Logo" />
         <form onSubmit={(e) => {
           submitHandler(e)
         }}>
@@ -68,7 +69,7 @@ export const CaptainLogin = () => {
           >
             Login
           </button>
-          <p className='text-center'>Join a fleet? <Link to='/captain-signup' className='text-blue-600'>Register as a Captin</Link></p>
+          <p className='text-center'>Join a fleet? <Link to='/captain-signup' className='text-blue-600'>Register as a Captain</Link></p>
         </form>
       </div>
       <div>

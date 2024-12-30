@@ -2,14 +2,6 @@ import { createContext, useState, useContext } from 'react';
 
 export const CaptainDataContext = createContext();
 
-// export const useCaptain = () =>{
-//     const context = useContext(CaptainContext)
-//     if(!context){
-//         throw new Error('useCaptain must be used within a CaptainProvider')
-//     }
-//     return context
-// };
-
 const CaptainContext = ({ children }) => {
     const [ captain, setCaptain ] = useState(null);
     const [ isLoading, setIsLoading ] = useState(false);
